@@ -1,0 +1,22 @@
+# https://github.com/resque/resque-scheduler/blob/master/README.md
+#
+# cron editor: http://www.corntab.com/pages/crontab-gui
+
+
+###
+# Every minute
+#LogQueueMetrics:
+#  cron: "* * * * *"
+#  class: "TestClass"
+#  queue: default
+
+update_teams:
+  # Everyday at 10:00
+  cron: "0 10 * * *"
+  class: "CrowdscoresUpdateTeams"
+  queue: crowdscores_update_teams
+
+queue_match_updates:
+  # Everyday at 10:00
+  cron: "0 10 * * *"
+  class: "MatchUpdatesQueuer"

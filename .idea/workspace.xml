@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dcd3c2c-f101-48b9-a895-53bbaf9a92a4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sportstats.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sportstats.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/workers/crowdscores_update_competitions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/workers/crowdscores_update_competitions.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/workers/crowdscores_update_rounds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/workers/crowdscores_update_rounds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/workers/crowdscores_update_seasons.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/workers/crowdscores_update_seasons.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/workers/crowdscores_update_teams.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/workers/crowdscores_update_teams.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/puma.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/puma.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/resque_schedule.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/resque_schedule.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/crowdscore/request.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/crowdscore/request.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,8 +46,8 @@
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            <state relative-caret-position="105">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -171,7 +160,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="804" />
+    <option name="height" value="812" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -274,12 +263,12 @@
       <workItem from="1516658834402" duration="5307000" />
       <workItem from="1524056578376" duration="6761000" />
       <workItem from="1524068111655" duration="138000" />
-      <workItem from="1524068255996" duration="1752000" />
+      <workItem from="1524068255996" duration="1965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158094000" />
+    <option name="totallyTimeSpent" value="158307000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -581,8 +570,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        <state relative-caret-position="105">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,5 @@
 class CrowdscoresUpdateRounds
-  @queue = 'crowdscores_update_rounds'
+  @queue = :crowdscores_update_rounds
 
   def self.perform()
     request = Crowdscore::Request.new

@@ -5,7 +5,7 @@ class CrowdscoresUpdateSeasons
     request = Typhoeus::Request.new(
       "api.crowdscores.com/v1/seasons",
       method: :get,
-      headers: { 'x-crowdscores-api-key' => 'efa501a0aa81457db48470c68158e3d0'}
+      headers: { 'x-crowdscores-api-key' => '5f862cc5f16c470eaba0fbcc819eb8f7'}
     )
 
     response = request.run

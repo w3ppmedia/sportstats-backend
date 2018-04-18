@@ -31,20 +31,20 @@ ActiveRecord::Schema.define(version: 20171122165513) do
   end
 
   create_table "matches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "away_team_id"
     t.integer  "home_team_id"
-    t.integer  "away_goals"
+    t.integer  "away_team_id"
     t.integer  "home_goals"
+    t.integer  "away_goals"
     t.integer  "extra_time"
     t.integer  "season_id"
     t.integer  "venue_id"
     t.integer  "competition_id"
     t.integer  "result"
-    t.string   "match_start",     limit: 50
     t.integer  "round_id"
+    t.integer  "match_start"
     t.integer  "crowdscore_dbid"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.index ["away_team_id"], name: "fk_rails_6a75121a9b", using: :btree
     t.index ["competition_id"], name: "fk_rails_f711d64481", using: :btree
     t.index ["home_team_id"], name: "fk_rails_4aed6bdf0d", using: :btree
@@ -92,12 +92,12 @@ ActiveRecord::Schema.define(version: 20171122165513) do
 
   create_table "teams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.integer  "national",        limit: 1
+    t.integer  "national"
     t.string   "short_name"
     t.string   "short_code"
     t.string   "shirt_url"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "crowdscore_dbid"
     t.index ["crowdscore_dbid"], name: "index_teams_on_crowdscore_dbid", unique: true, using: :btree
   end

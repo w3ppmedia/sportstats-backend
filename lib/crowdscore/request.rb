@@ -9,7 +9,7 @@ module Crowdscore
       request = Typhoeus::Request.new(
         "#{@base_uri}/#{@version}/#{query_string}",
         method: :get,
-        headers: { 'x-crowdscores-api-key' => 'efa501a0aa81457db48470c68158e3d0'}
+        headers: { 'x-crowdscores-api-key' => '5934f2a3dab74fb4acf6c7c69fb21b41'}
       )
 
       request.run

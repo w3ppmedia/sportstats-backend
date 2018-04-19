@@ -2,13 +2,9 @@ class CrowdscoresUpdateSeasons
   @queue = 'crowdscores_update_seasons'
 
   def self.perform()
-    request = Typhoeus::Request.new(
-      "api.crowdscores.com/v1/seasons",
-      method: :get,
-      headers: { 'x-crowdscores-api-key' => '5f862cc5f16c470eaba0fbcc819eb8f7'}
-    )
+    request = Crowdscore::Request.new
+    response = request.process("seasons")
 
-    response = request.run
     process(response.response_body) if response.response_code == 200
   end
 

@@ -55,7 +55,6 @@
     <orderEntry type="library" scope="PROVIDED" name="mono_logger (v1.1.0, RVM: ruby-2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.12.2, RVM: ruby-2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mustermann (v1.0.1, RVM: ruby-2.4.3) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mysql2 (v0.4.9, RVM: ruby-2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.1.0, RVM: ruby-2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.8.1, RVM: ruby-2.4.3) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry (v0.11.2, RVM: ruby-2.4.3) [gem]" level="application" />

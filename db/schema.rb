@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 20171122165513) do
 
-  create_table "competitions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "competitions", force: :cascade do |t|
     t.string   "name"
     t.string   "flag_url"
     t.string   "short_name"
@@ -23,14 +26,14 @@ ActiveRecord::Schema.define(version: 20171122165513) do
     t.datetime "updated_at",      null: false
   end
 
-  create_table "match_queues", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "match_queues", force: :cascade do |t|
     t.integer  "round_id"
     t.integer  "processed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "matches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "matches", force: :cascade do |t|
     t.integer  "home_team_id"
     t.integer  "away_team_id"
     t.integer  "home_goals"
@@ -45,13 +48,9 @@ ActiveRecord::Schema.define(version: 20171122165513) do
     t.integer  "crowdscore_dbid"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.index ["away_team_id"], name: "fk_rails_6a75121a9b", using: :btree
-    t.index ["competition_id"], name: "fk_rails_f711d64481", using: :btree
-    t.index ["home_team_id"], name: "fk_rails_4aed6bdf0d", using: :btree
-    t.index ["season_id"], name: "fk_rails_5b83ef0b54", using: :btree
   end
 
-  create_table "region_groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "region_groups", force: :cascade do |t|
     t.string   "name"
     t.integer  "region_group_id"
     t.integer  "crowdscore_dbid"
@@ -61,7 +60,7 @@ ActiveRecord::Schema.define(version: 20171122165513) do
     t.index ["crowdscore_dbid"], name: "index_region_groups_on_crowdscore_dbid", unique: true, using: :btree
   end
 
-  create_table "regions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "regions", force: :cascade do |t|
     t.string   "name"
     t.integer  "region_group_id"
     t.integer  "crowdscore_dbid"
@@ -71,10 +70,10 @@ ActiveRecord::Schema.define(version: 20171122165513) do
     t.index ["crowdscore_dbid"], name: "index_regions_on_crowdscore_dbid", unique: true, using: :btree
   end
 
-  create_table "rounds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "rounds", force: :cascade do |t|
     t.string   "name"
-    t.integer  "season_id"
-    t.integer  "competition_id"
+    t.integer  "season"
+    t.integer  "competition"
     t.integer  "active"
     t.string   "full_name"
     t.integer  "crowdscore_dbid"
@@ -83,33 +82,33 @@ ActiveRecord::Schema.define(version: 20171122165513) do
     t.index ["crowdscore_dbid"], name: "index_rounds_on_crowdscore_dbid", unique: true, using: :btree
   end
 
-  create_table "seasons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "seasons", force: :cascade do |t|
     t.string   "name"
     t.integer  "crowdscore_dbid"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
-  create_table "teams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "teams", force: :cascade do |t|
     t.string   "name"
     t.integer  "national"
     t.string   "short_name"
-    t.string   "short_code"
     t.string   "shirt_url"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "crowdscore_dbid"
+    t.string   "short_code"
     t.index ["crowdscore_dbid"], name: "index_teams_on_crowdscore_dbid", unique: true, using: :btree
   end
 
-  create_table "venues", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "venues", force: :cascade do |t|
     t.integer  "capacity"
     t.string   "name"
-    t.float    "latitude",        limit: 24
-    t.float    "longitude",       limit: 24
+    t.float    "latitude"
+    t.float    "longitude"
     t.integer  "crowdscore_dbid"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   add_foreign_key "matches", "competitions"

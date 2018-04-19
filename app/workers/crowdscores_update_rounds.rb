@@ -3,7 +3,7 @@ class CrowdscoresUpdateRounds
 
   def self.perform()
     request = Crowdscore::Request.new
-    response = request.process('rounds')
+    response = request.process("rounds")
 
     process(response.response_body) if response.response_code == 200
   end

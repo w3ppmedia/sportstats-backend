@@ -2,13 +2,9 @@ class CrowdscoresUpdateTeams
   @queue = 'crowdscores_update_teams'
 
   def self.perform()
-    request = Typhoeus::Request.new(
-      "api.crowdscores.com/v1/teams",
-      method: :get,
-      headers: { 'x-crowdscores-api-key' => '5f862cc5f16c470eaba0fbcc819eb8f7'}
-    )
+    request = Crowdscore::Request.new
 
-    response = request.run
+    response = request.process("teams")
     process_teams(response.response_body) if response.response_code == 200
   end
 

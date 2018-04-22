@@ -12,7 +12,7 @@
 
 update_teams:
   # Everyday at 01:40
-  cron: "*/10 * * * *"
+  cron: "40 1 * * *"
   class: "CrowdscoresUpdateTeams"
   queue: crowdscores_update_teams
 
@@ -24,19 +24,19 @@ update_competitions:
 
 update_season:
     # Everyday at 01:45
-    cron: "*/10 * * * *"
+    cron: "40 1 * * *"
     class: "CrowdscoresUpdateSeasons"
     queue: crowdscores_update_seasons
 
 update_rounds:
   # Everyday at 01:50
-  cron: "*/10 * * * *"
+  cron: "40 1 * * *"
   class: "CrowdscoresUpdateRounds"
   queue: crowdscores_update_rounds
 
 update_teams:
   # Everyday at 01:55
-  cron: "*/10 * * * *"
+  cron: "40 1 * * *"
   class: "CrowdscoresUpdateTeams"
   queue: crowdscores_update_teams
 

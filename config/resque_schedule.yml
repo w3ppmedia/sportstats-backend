@@ -10,27 +10,33 @@
 #  class: "TestClass"
 #  queue: default
 
+update_teams:
+  # Everyday at 01:40
+  cron: "*/10 * * * *"
+  class: "CrowdscoresUpdateTeams"
+  queue: crowdscores_update_teams
+
 update_competitions:
   # Everyday at 01:40
-  cron: "40 1 * * *"
+  cron: "*/10 * * * *"
   class: "CrowdscoresUpdateCompetitions"
   queue: crowdscores_update_competitions
 
 update_season:
     # Everyday at 01:45
-    cron: "45 1 * * *"
+    cron: "*/10 * * * *"
     class: "CrowdscoresUpdateSeasons"
     queue: crowdscores_update_seasons
 
 update_rounds:
   # Everyday at 01:50
-  cron: "50 1 * * *"
+  cron: "*/10 * * * *"
   class: "CrowdscoresUpdateRounds"
   queue: crowdscores_update_rounds
 
 update_teams:
   # Everyday at 01:55
-  cron: "55 1 * * *"
+  cron: "*/10 * * * *"
   class: "CrowdscoresUpdateTeams"
   queue: crowdscores_update_teams
 

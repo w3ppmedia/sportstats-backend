@@ -42,6 +42,6 @@ update_teams:
 
 queue_match_updates:
   # Every 10 min
-  cron: "*/10 * * * *"
+  cron: "0 */6 * * *"
   class: "MatchUpdatesQueuer"
   queue: match_updates_queuer

@@ -35,6 +35,10 @@ gem 'resque', :require => 'resque/server'
 gem 'resque-web', require: 'resque_web'
 gem 'resque-scheduler-web'
 
+gem "sinatra", ">= 2.0.2"
+gem "rails-html-sanitizer", ">= 1.0.4"
+gem "loofah", ">= 2.2.3"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

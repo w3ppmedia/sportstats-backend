@@ -29,7 +29,7 @@ gem 'bootstrap-sass', '~> 2.0.3'
 # If you change upgrade this version, remember we have monkey patched
 # Resque's child process kill logic in lib/resque_extensions
 gem 'resque', :require => 'resque/server'
-# gem 'resque-scheduler', '~> 4.0.0'
+gem 'resque-scheduler', '~> 4.0.0'
 
 # Careful when updating this one willy-nilly; improper semver.
 gem 'resque-web', require: 'resque_web'

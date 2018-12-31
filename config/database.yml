@@ -7,8 +7,8 @@
 default: &default
   adapter: postgresql
   host: 127.0.0.1
-  username: admin
-  password:
+  username: root
+  password: stockify
   pool: 5
   timeout: 5000
 

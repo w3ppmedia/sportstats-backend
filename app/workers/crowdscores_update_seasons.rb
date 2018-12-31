@@ -13,6 +13,7 @@ class CrowdscoresUpdateSeasons
 
     seasons.each do |season|
       Season.new(
+
         name: season.name,
         crowdscore_dbid: season.dbid
       ).save
